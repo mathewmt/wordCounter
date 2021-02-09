@@ -112,10 +112,10 @@ exports.homePost = (req, res) => {
     request(url, function (error, response, html) {
         if (!error) {
           var $ = cheerio.load(html);
-            var allitems =$("body");
+            var allitems =$("html");
             
             allitems.each(function(){
-                var a =$("body").text()
+                var a =$("html").text()
             console.log(count(a));
            
             

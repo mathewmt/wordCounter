@@ -9,12 +9,12 @@
     "express-session": "^1.17.1",
     "jade": "^1.11.0",
     "mongoose": "^5.11.15",
+    "request": "^2.88.2",
     "word-count": "^0.2.2"
   },
   "devDependencies": {},
   "scripts": {
     "start": "node app.js"
-    
   },
   "author": "me",
   "license": "ISC"
