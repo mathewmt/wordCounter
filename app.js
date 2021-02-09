@@ -25,7 +25,7 @@ require('./app/routes/user.route.js')(app);
  
 
 app.get('/', (req, res) => res.send('Hello World!'))
-var server = app.listen(80, function () 
+var server = app.listen(process.env.PORT || 80, function () 
 {
     console.log('Node server is running..');
 });
