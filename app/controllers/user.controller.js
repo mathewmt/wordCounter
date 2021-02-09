@@ -92,7 +92,7 @@ exports.home = (req, res) => {          // Home page or the page after login
     res.render('home');
 
     }else{
-        res.redirect('/login');
+        res.redirect('/');
      
     }
 
@@ -180,7 +180,7 @@ exports.homePost = (req, res) => {
     
 
     }else{
-        res.redirect('/login');
+        res.redirect('/');
      }
 
 };
@@ -216,7 +216,7 @@ exports.history = (req, res) => { //////Table to display the history
                 res.redirect('/history');
             });
         }else{
-            res.redirect('/login');
+            res.redirect('/');
         }
     };
 
