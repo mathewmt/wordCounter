@@ -14,7 +14,7 @@ var request = require("request")
 
 
 app.use(session({ secret: 'keyboard cat',proxy: true,resave: true,saveUninitialized: true, cookie: { maxAge: 600000 }}));
-mongoose.connect('mongodb://localhost:27017/Word',{useUnifiedTopology: true,useNewUrlParser: true});
+mongoose.connect('mongodb+srv://worddb:wordpassword@cluster0.f98o4.mongodb.net/Word?retryWrites=true&w=majority',{useUnifiedTopology: true,useNewUrlParser: true});
 var Schema = mongoose.Schema;
 
 require('./app/routes/users.route.js')(app);
