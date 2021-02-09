@@ -104,7 +104,7 @@ exports.loginPost = (req, res) => {     // login connection
              req.session.destroy(function(err)
             {
                 if(err) throw err;
-                res.redirect('/login');
+                res.redirect('/');
             });
         }else
         {
