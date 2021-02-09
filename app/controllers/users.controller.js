@@ -108,7 +108,7 @@ exports.loginPost = (req, res) => {     // login connection
             });
         }else
         {
-            res.redirect('/login'); 
+            res.redirect('/'); 
         }
     };
     
