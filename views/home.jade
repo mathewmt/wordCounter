@@ -1,0 +1,104 @@
+
+
+
+doctype html
+html(lang='en')
+  head
+    title Word-Counter
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(href='https://fonts.googleapis.com/css?family=Rubik:400,700', rel='stylesheet')
+  link(rel='stylesheet', href='/theme/fonts/icomoon/style.css')
+  link(rel='stylesheet', href='/theme/css/bootstrap.min.css')
+  link(rel='stylesheet', href='/theme/css/magnific-popup.css')
+  link(rel='stylesheet', href='/theme/css/jquery-ui.css')
+  link(rel='stylesheet', href='/theme/css/owl.carousel.min.css')
+  link(rel='stylesheet', href='/theme/css/owl.theme.default.min.css')
+  link(rel='stylesheet', href='/theme/css/bootstrap-datepicker.css')
+  link(rel='stylesheet', href='/theme/fonts/flaticon/font/flaticon.css')
+  link(rel='stylesheet', href='/theme/css/aos.css')
+  link(rel='stylesheet', href='/theme/css/rangeslider.css')
+  link(rel='stylesheet', href='/theme/css/style.css')
+  body
+    .site-wrap
+      .site-mobile-menu
+        .site-mobile-menu-header
+          .site-mobile-menu-close.mt-3
+            span.icon-close2.js-menu-toggle
+        .site-mobile-menu-body
+      header.site-navbar(role='banner')
+        .container
+          .row.align-items-center
+            .col-11.col-xl-2
+              h1.mb-0.site-logo
+                a.text-white.h1.mb-0(href='/') WORD COUNTER
+            .col-12.col-md-10.d-none.d-xl-block
+              nav.site-navigation.position-relative.text-right(role='navigation')
+                ul.site-menu.js-clone-nav.mr-auto.d-none.d-lg-block
+                  li.active
+                    a(href='/')
+                      span Home
+              
+                  li
+                    a(href='/history')
+                      span History
+                  li
+                    a(href='/logout')
+                      span Logout
+            .d-inline-block.d-xl-none.ml-md-0.mr-auto.py-3(style='position: relative; top: 3px;')
+              a.site-menu-toggle.js-menu-toggle.text-white(href='#')
+                span.icon-menu.h3
+    .site-blocks-cover.overlay(style='background-image: url(/theme/images/hero_1.jpg);', data-aos='fade', data-stellar-background-ratio='0.5')
+      .container
+        .row.align-items-center.justify-content-center.text-center
+          .col-md-10
+            .row.justify-content-center.mb-4
+              .col-md-10.text-center
+                h1(data-aos='fade-up')
+                  | Help people to find 
+                  span.typed-words
+            .form-search-wrap.p-2(data-aos='fade-up', data-aos-delay='200')
+              form(method='post' action='/home')
+                .row.align-items-center
+                  .col-lg-12.col-xl-10.no-sm-border.border-right
+                    input.form-control(type='text', id="search-box", name="url"  placeholder='Type the URL' required)
+                  
+                    
+                     
+                  .col-lg-12.col-xl-2.ml-auto.text-right
+                     
+                        input.btn.text-white.btn-primary(type='submit' value='Search')(style='width:140px;' ) 
+            .row.align-items-center
+                  .col-lg-12.col-xl-10.no-sm-border.border-right(style='color:white; font-size:40px;' ) 
+                    if no 
+                       |  #{no}
+
+      
+   
+          script(src='/theme/js/jquery-3.3.1.min.js')
+          script(src='/theme/js/jquery-migrate-3.0.1.min.js')
+          script(src='/theme/js/jquery-ui.js')
+          script(src='/theme/js/popper.min.js')
+          script(src='/theme/js/bootstrap.min.js')
+          script(src='/theme/js/owl.carousel.min.js')
+          script(src='/theme/js/jquery.stellar.min.js')
+          script(src='/theme/js/jquery.countdown.min.js')
+          script(src='/theme/js/jquery.magnific-popup.min.js')
+          script(src='/theme/js/bootstrap-datepicker.min.js')
+          script(src='/theme/js/aos.js')
+          script(src='/theme/js/rangeslider.min.js')
+          script(src='/theme/js/typed.js')
+         
+
+          
+          script.
+            var typed = new Typed('.typed-words', {
+            strings: ["Word Count of a Website"],
+            typeSpeed: 80,
+            backSpeed: 80,
+            backDelay: 4000,
+            startDelay: 1000,
+            loop: true,
+            showCursor: true
+            });
+          script(src='/theme/js/main.js')

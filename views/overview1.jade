@@ -1,0 +1,98 @@
+doctype html
+html(lang='en')
+  head
+    title Incomeview
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    // ===============================================================================================
+    link(rel='icon' type='image/png' href='incomeview/images/icons/favicon.ico')
+    // ===============================================================================================
+    link(rel='stylesheet' type='text/css' href='incomeview/vendor/bootstrap/css/bootstrap.min.css')
+    // ===============================================================================================
+    link(rel='stylesheet' type='text/css' href='incomeview/fonts/font-awesome-4.7.0/css/font-awesome.min.css')
+    // ===============================================================================================
+    link(rel='stylesheet' type='text/css' href='incomeview/vendor/animate/animate.css')
+    // ===============================================================================================
+    link(rel='stylesheet' type='text/css' href='incomeview/vendor/select2/select2.min.css')
+    // ===============================================================================================
+    link(rel='stylesheet' type='text/css' href='incomeview/vendor/perfect-scrollbar/perfect-scrollbar.css')
+    // ===============================================================================================
+    link(rel='stylesheet' type='text/css' href='/incomeview/css/util.css')
+    link(rel='stylesheet' type='text/css' href='/incomeview/css/main.css')
+    // ===============================================================================================
+    style.
+      input[type=text], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      }
+      input[type=submit] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      }
+      ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      }
+      li {
+      display: inline;
+      }
+  body
+    br
+    h1 INCOME
+    .limiter
+      ul
+        li
+          a(href='/login') Login
+        li
+          a(href='/signup') Signup
+        li
+          a(href='#about') About
+
+           div
+              form
+                input#fname(type='text' name='firstname' placeholder='Your name..')
+                input(type='submit' value='Submit')
+      .container-table100
+        
+        .wrap-table100
+          .table100.ver1.m-b-110
+            .table100-head
+              table
+                thead
+                  tr.row100.head
+                    th.cell100.column1 Slno
+                    th.cell100.column2 CATEGORY
+                    th.cell100.column3 AMOUNT
+            .table100-body.js-pscroll
+              table
+                tbody
+          // ===============================================================================================
+          script(src='incomeview/vendor/jquery/jquery-3.2.1.min.js')
+          // ===============================================================================================
+          script(src='incomeview/vendor/bootstrap/js/popper.js')
+          script(src='incomeview/vendor/bootstrap/js/bootstrap.min.js')
+          // ===============================================================================================
+          script(src='incomeview/vendor/select2/select2.min.js')
+          // ===============================================================================================
+          script(src='incomeview/vendor/perfect-scrollbar/perfect-scrollbar.min.js')
+          script.
+            $('.js-pscroll').each(function() {
+            var ps = new PerfectScrollbar(this);
+            $(window).on('resize', function() {
+            ps.update();
+            })
+            });
+          // ===============================================================================================
+          script(src='incomeview/js/main.js')

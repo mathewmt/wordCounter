@@ -1,0 +1,75 @@
+doctype html
+html(lang='en')
+  head
+    title HISTORY
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // ===============================================================================================
+    link(rel='icon', type='image/png', href='incomeview/images/icons/favicon.ico')
+    // ===============================================================================================
+    link(rel='stylesheet', type='text/css', href='incomeview/vendor/bootstrap/css/bootstrap.min.css')
+    // ===============================================================================================
+    link(rel='stylesheet', type='text/css', href='incomeview/fonts/font-awesome-4.7.0/css/font-awesome.min.css')
+    // ===============================================================================================
+    link(rel='stylesheet', type='text/css', href='incomeview/vendor/animate/animate.css')
+    // ===============================================================================================
+    link(rel='stylesheet', type='text/css', href='incomeview/vendor/select2/select2.min.css')
+    // ===============================================================================================
+    link(rel='stylesheet', type='text/css', href='incomeview/vendor/perfect-scrollbar/perfect-scrollbar.css')
+    // ===============================================================================================
+    link(rel='stylesheet', type='text/css', href='/incomeview/css/util.css')
+    link(rel='stylesheet', type='text/css', href='/incomeview/css/main.css')
+    // ===============================================================================================
+  body
+    br
+    h1 HISTORY
+    .limiter
+      .container-table100
+        .wrap-table100
+          .table100.ver1.m-b-110
+            .table100-head
+              - var count = 1;
+              table
+                thead
+                  tr.row100.head
+                    th.cell100.column1 Slno
+                    th.cell100.column2 URL
+                    th.cell100.column3 WORD NO
+                    th.cell100.column4 ACTION
+                    
+            .table100-body.js-pscroll
+              table
+                tbody
+                if word
+                  each item in word
+                      tr.row100.body
+                        td.cell100.column1= count
+                        td.cell100.column2= item.url
+                        td.cell100.column3= item.wno 
+                        td.cell100.column4 
+                          a(href='/history_delete/'+item._id) delete
+                        
+                          - count++;
+        br
+        br
+        a(href='/home')(style ='align: center;')
+              input(type='submit', name='back', value='BACK HOME')
+
+      // ===============================================================================================
+      script(src='incomeview/vendor/jquery/jquery-3.2.1.min.js')
+      // ===============================================================================================
+      script(src='incomeview/vendor/bootstrap/js/popper.js')
+      script(src='incomeview/vendor/bootstrap/js/bootstrap.min.js')
+      // ===============================================================================================
+      script(src='incomeview/vendor/select2/select2.min.js')
+      // ===============================================================================================
+      script(src='incomeview/vendor/perfect-scrollbar/perfect-scrollbar.min.js')
+      script.
+        $('.js-pscroll').each(function(){
+        var ps = new PerfectScrollbar(this);
+        $(window).on('resize', function(){
+        ps.update();
+        })
+        });
+      // ===============================================================================================
+      script(src='incomeview/js/main.js')
